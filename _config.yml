@@ -11,3 +11,9 @@ github_username:  mhoffmann
 markdown: kramdown
 
 highlighter: pygments
+
+comments:
+  provider: disqus
+  disqus:
+    short_name: hoffbloghoffblog
+
