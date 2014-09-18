@@ -10,7 +10,7 @@ tar xzf percona-server-5.6.20-68.0.tar.gz
 cd percona-server-5.6.20-68.0/plugin/percona-udf/
 gcc `mysql_config --cflags` -02 -Wall `mysql_config --include` -shared -o fnv1a_udf.so fnv1a_udf.cc
 cp fnv1a_udf.so /usr/lib64/mysql/plugin/
-mysql mysql -e "CREATE FUNCTION fnv1a_64 RETURNS INTEGER SONAME 'fnv1a_udf.so'"
+mysql -e "CREATE FUNCTION fnv1a_64 RETURNS INTEGER SONAME 'fnv1a_udf.so'"
 {% endhighlight %}
 
 try it..
